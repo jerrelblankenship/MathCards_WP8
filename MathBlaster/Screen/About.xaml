@@ -1,0 +1,87 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="MathBlaster.Screen.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="1">
+            <TextBlock x:Name="PageTitle" Text="Math Cards" TextAlignment="Center" Margin="0,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>            
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2">
+            <StackPanel Orientation="Horizontal" Margin="4" HorizontalAlignment="Center">
+                <TextBlock x:Name="ApplicationTitle" Text="Version: " TextAlignment="Left" Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Name="VersionNumber" TextAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="4" HorizontalAlignment="Left">
+                <TextBlock Text="Created By: " TextAlignment="Left" Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock>Jerrel Blankenship</TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0" Height="62" HorizontalAlignment="Left">
+                <TextBlock Text="Contact Email: " VerticalAlignment="Center" TextAlignment="Left" Style="{StaticResource PhoneTextAccentStyle}"/>
+                <Button Name="EmailSupport" Click="EmailSupport_Click" Width="325" BorderThickness="0" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}">
+                    <TextBlock TextDecorations="Underline">support@jerrelblankenship.com</TextBlock>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Margin="15,25,15,15" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Image Acknowledgements: " HorizontalAlignment="Center" Style="{StaticResource PhoneTextAccentStyle}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="15,-10,15,0">
+                <TextBlock HorizontalAlignment="Center">Application Icons completed with help from</TextBlock>
+                <Button Name="IconLink" Click="IconLink_Click" Width="200" BorderThickness="0" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}">
+                    <TextBlock TextDecorations="Underline">Dan Shultz</TextBlock>                    
+                </Button>
+                
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical" Margin="15,5,15,0">
+                <TextBlock HorizontalAlignment="Center">Smiley face images provide by </TextBlock>
+                <Button Name="TangoLink" Click="TangoLink_Click" Width="250" BorderThickness="0" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}">
+                    <Button.Content>
+                        <TextBlock TextDecorations="Underline">Tango Desktop Project</TextBlock>                        
+                    </Button.Content>
+                </Button>                
+            </StackPanel>
+
+            <StackPanel Margin="30,100,30,30" HorizontalAlignment="Center">
+                <TextBlock FontSize="{StaticResource PhoneFontSizeSmall}" TextAlignment="Center" HorizontalAlignment="Left" >This is my first app. I would appreciate</TextBlock>
+                <TextBlock FontSize="{StaticResource PhoneFontSizeSmall}" TextAlignment="Center" HorizontalAlignment="Left" >feedback on how I can improve this app. </TextBlock>                
+            </StackPanel>
+        </StackPanel>        
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

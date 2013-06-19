@@ -1,0 +1,35 @@
+﻿using MathBlaster.Screen;
+
+namespace MathBlaster.Presenters
+{
+    public class StartPagePresenter
+    {
+        private IStartPage startPageView;
+        private AppSettingsStorage storageSettings;
+
+        public StartPagePresenter(IStartPage view, AppSettingsStorage settings)
+        {
+            startPageView = view;
+            storageSettings = settings;
+        }
+        
+        public void SaveOperationToPerform(string quizName)
+        {
+            switch (quizName)
+            {
+                case "additionQuiz":
+                    storageSettings.OperationToPerformSetting = OperatorEnum.addition;
+                    break;
+                case "subtractionQuiz":
+                    storageSettings.OperationToPerformSetting =  OperatorEnum.subtraction;
+                    break;
+                case "multiplicationQuiz":
+                    storageSettings.OperationToPerformSetting = OperatorEnum.multiplication;
+                    break;
+                case "divisionQuiz":
+                    storageSettings.OperationToPerformSetting = OperatorEnum.division;
+                    break;
+            }
+        }
+    }
+}
