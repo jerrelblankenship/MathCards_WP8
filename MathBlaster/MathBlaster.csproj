@@ -109,6 +109,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\FeedbackHelper.cs" />
+    <Compile Include="Helpers\StorageHelper.cs" />
     <Compile Include="Screen\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
