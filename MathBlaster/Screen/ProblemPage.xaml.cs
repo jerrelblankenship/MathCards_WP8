@@ -229,11 +229,6 @@ namespace MathBlaster.Screen
             DisplayResult.Text = DisplayResult.Text.BackSpace();
         }
 
-        private void GestureListener_Hold(object sender, GestureEventArgs e)
-        {
-            DisplayResult.Text = string.Empty;
-        }
-
         private void AnswerButton_Click(object sender, EventArgs e)
         {
             if (keyPad.IsHitTestVisible)

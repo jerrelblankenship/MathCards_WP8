@@ -93,11 +93,7 @@
                 </StackPanel>
                 <StackPanel Name="keyPadRow4" Orientation="Horizontal">                    
                     <Button Name="ZeroValue" Content="0" Style="{StaticResource KeyPadNumberZero}" Click="InputButton_Click" Template="{StaticResource CurvedCornerButtonTemplate}" />
-                    <Button Name="BackValue" Style="{StaticResource KeyPadNumber}" Click="BackValue_Click" Template="{StaticResource CurvedCornerButtonTemplate}" FontFamily="/MathCards;component/fonts/Fonts.zip#Wingdings" FontSize="36" HorizontalContentAlignment="Center">                        
-                        <toolkit:GestureService.GestureListener>
-                            <toolkit:GestureListener Hold="GestureListener_Hold"/>
-                        </toolkit:GestureService.GestureListener>
-                    </Button>
+                    <Button Name="BackValue" Style="{StaticResource KeyPadNumber}" Click="BackValue_Click" Template="{StaticResource CurvedCornerButtonTemplate}" FontFamily="/MathCards;component/fonts/Fonts.zip#Wingdings" FontSize="36" HorizontalContentAlignment="Center"></Button>
                 </StackPanel>                
             </StackPanel>            
             <StackPanel Name="ResultPad" Orientation="Vertical">
