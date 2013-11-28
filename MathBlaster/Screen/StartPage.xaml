@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ctrl="clr-namespace:MathBlaster.UserControls"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -39,7 +40,9 @@
             <Button Name="subtractionQuiz" Width="350" Height="90" Style="{StaticResource KeyPadNumber}" Content="Subtraction Quiz" Click="quiz_Click" Template="{StaticResource CurvedCornerButtonTemplate}"/>
             <Button Name="multiplicationQuiz" Width="350" Height="90" Style="{StaticResource KeyPadNumber}" Content="Multiplication Quiz" Click="quiz_Click" Template="{StaticResource CurvedCornerButtonTemplate}"/>
             <Button Name="divisionQuiz" Width="350" Height="90" Style="{StaticResource KeyPadNumber}" Content="Division Quiz" Click="quiz_Click" Template="{StaticResource CurvedCornerButtonTemplate}"/>
-        </StackPanel>        
+        </StackPanel>
+
+        <ctrl:FeedbackOverlay Grid.RowSpan="2" EnableAnimation="True" />
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
